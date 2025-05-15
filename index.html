@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booquet - Comunidad de Lectores</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="top"></div>
+  
+  <header>
+    <nav>
+      <a href="#" class="logo">
+        <img src="./img/logo.png" alt="Logo de Booquet" width="120" height="auto">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#recomendaciones">Recomendaciones</a></li>
+        <li><a href="#buscador">Buscar librerías</a></li>
+        <li><a href="#pdfs">Subir PDFs</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#acceso">Acceso</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cabecera">
+      <div class="contenedor">
+        <h1>Bookboxd - Comunidad de Lectores</h1>
+        <p>Descubre, puntúa y comparte libros con la comunidad</p>
+      </div>   
+    </section>
+
+    <section id="recomendaciones" class="recomendaciones">
+      <h2>Libros recomendados</h2>
+      <div class="carrusel-libros" tabindex="0" aria-label="Libros recomendados, desplázate horizontalmente">
+        <article class="libro-card">
+          <img src="./img/cordero.jpg" alt="Portada de El Cordero Carnivoro">
+          <div class="libro-info">
+            <h3>El Cordero Carnívoro</h3>
+            <p>Agustín Gómez Arcos</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,9 de 5">⭐ 4,9</div>
+            <p class="resena">"Un relato brutal y valiente que desgarra los tabúes familiares y sociales de la posguerra española con una potencia narrativa inigualable"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/camaleones.jpeg" alt="Portada de Música para Camaleones">
+          <div class="libro-info">
+            <h3>Música para Camaleones</h3>
+            <p>Truman Capote</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,8 de 5">⭐ 4,8</div>
+            <p class="resena">"Un deslumbrante mosaico de relatos y retratos donde Capote transforma lo cotidiano en literatura inolvidable, con una prosa tan limpia y fascinante como un arroyo de montaña"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/cuerpo.jpg" alt="El Cuerpo de Cristo">
+          <div class="libro-info">
+            <h3>El Cuerpo de Cristo</h3>
+            <p>Bea Lema</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,9 de 5">⭐ 4,9</div>
+            <p class="resena">"Bea Lema borda -literalmente- una declaración de amor y supervivencia entre madre e hija en la España más oscura"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/prision.jpg" alt="La Prisión de la Libertad">
+          <div class="libro-info">
+            <h3>La Prisión de la Libertad</h3>
+            <p>Michael Ende</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,7 de 5">⭐ 4,7</div>
+            <p class="resena">"Un deslumbrante caleidoscopio de relatos donde Michael Ende explora, con maestría y fantasía, los límites invisibles entre la libertad y la prisión que habitan en nuestro interior"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/munro.jpg" alt="El Amor de una Mujer Generosa">
+          <div class="libro-info">
+            <h3>El Amor de una Mujer Generosa</h3>
+            <p>Alice Munro</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,7 de 5">⭐ 4,7</div>
+            <p class="resena">"Ocho relatos deslumbrantes donde Alice Munro revela, con sutileza y sin complacencias, las pasiones y contradicciones que laten bajo la superficie de vidas aparentemente ordinarias"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/chandler.jpg" alt="El Sueño Eterno">
+          <div class="libro-info">
+            <h3>El Sueño Eterno</h3>
+            <p>Raymond Chandler</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,8 de 5">⭐ 4,8</div>
+            <p class="resena">"Un clásico del género negro donde Philip Marlowe navega la corrupción y el deseo en Los Ángeles, armado solo con su ingenio y un código moral tan duro como la ciudad que lo rodea"</p>
+          </div>
+        </article>
+        <article class="libro-card">
+          <img src="./img/luna.jpg" alt="Luna Llena">
+          <div class="libro-info">
+            <h3>Luna Llena</h3>
+            <p>Aki Shimazaki</p>
+            <div class="puntuacion" aria-label="Puntuación: 4,6 de 5">⭐ 4,6</div>
+            <p class="resena">"Una novela sutil y poética que explora con delicadeza la memoria, el amor y el paso del tiempo."</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="buscador" class="buscador">
+      <h2>Buscar libro en librerías</h2>
+      <form>
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ejemplo: San Manuel Bueno, mártir">
+
+        <label for="autor">Autor/a</label>
+        <input type="text" id="autor" name="autor" placeholder="Ejemplo: Miguel de Unamuno">
+
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="resultados-busqueda">
+        <!-- Resultados simulados -->
+        <div class="resultado">
+          <span>San Manuel Bueno, mártir</span> - <span>Letras Corsarias</span> - <span>Disponible</span>
+        </div>
+        <!-- Más resultados... -->
+      </div>
+    </section>
+
+    <section id="pdfs" class="pdfs">
+      <h2>Sube y comparte tus PDFs</h2>
+      <form>
+        <label for="pdf-titulo">Título del libro</label>
+        <input type="text" id="pdf-titulo" name="pdf-titulo">
+
+        <label for="pdf-archivo">Archivo PDF</label>
+        <input type="file" id="pdf-archivo" name="pdf-archivo" accept=".pdf">
+
+        <button type="submit">Subir PDF</button>
+      </form>
+      <div class="pdf-lista">
+        <div class="pdf-item">
+          <span>El Asesinato de Roger Ackroyd</span> - <a href="#">Descargar PDF</a>
+        </div>
+        <!-- Más PDFs... -->
+      </div>
+    </section>
+
+    <section id="reseñas" class="reseñas">
+      <h2>Últimas reseñas de la comunidad</h2>
+      <div class="resenas-lista">
+        <article class="resena-card">
+          <h3>Marina</h3>
+          <p class="autor">Carlos Ruiz Zafón</p>
+          <div class="puntuacion">⭐ 4,5</div>
+          <p>"Un viaje inolvidable por la Barcelona más misteriosa, donde el amor y el dolor se entrelazan en una historia que deja huella en el alma"</p>
+        </article>
+        <!-- Más reseñas... -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Booquet. Comunidad colaborativa de lectores.</p>
+  </footer>
+
+<a href="#top" class="btn-arriba" aria-label="Ir arriba de la página">↑</a>
+
+</body>
+</html>
