@@ -64,6 +64,7 @@ main {
 }
 
 .cabecera {
+  background-image: url("../img/portada-ejemplo1.png");
   background-size: cover; 
   background-position: bottom;
   background-repeat: no-repeat;
