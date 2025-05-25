@@ -4,7 +4,7 @@
   --primary: #a25c43;
   --secondary: #c9ba12;
   --accent: #000626;
-  --text-main: #222;
+  --text-main: #0d0505;
   --text-light: #fff;
   --shadow: 0 4px 16px rgba(60,60,60,0.08);
 }
@@ -23,21 +23,28 @@ header {
 }
 
 nav {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.2em 2em;
-  flex-wrap: wrap;
+  height: 90%;
+  max-width: 1100px;        
+  margin: 0 auto;
+  padding: 0 2em;
 }
 
 .logo-img {
+  flex: 0 0 auto;
   width: 120px;
   height: auto;
-  display: block;
+  z-index: 2;
 }
 
 .nav-links {
   list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 2em;
   margin: 0;
@@ -64,6 +71,7 @@ main {
 }
 
 .cabecera {
+  background-image: url("../img/portada-ejemplo1.png");
   background-size: cover; 
   background-position: bottom;
   background-repeat: no-repeat;
@@ -164,31 +172,44 @@ section {
 .buscador form,
 .pdfs form {
   background: var(--bg-card);
-  padding: 1.5em;
-  border-radius: 8px;
+  padding: 2em 1.5em;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   display: grid;
-  gap: 1em;
-  max-width: 400px;
-  margin-bottom: 1.5em;
+  gap: 1.2em;
+  max-width: 90%;
+  margin: 0 auto 2em auto; 
+  border: 1.5px solid #ececec;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.buscador form:focus-within,
+.pdfs form:focus-within {
+  box-shadow: 0 6px 24px rgba(60,60,60,0.14);
+  border-color: var(--secondary);
 }
 
 label {
   font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
 
 input[type="text"],
-input[type="file"],
-button[type="submit"] {
-  padding: 0.6em;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+input[type="file"] {
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  border: 1.5px solid #bbb;
   font-size: 1em;
+  background: #f9f9f7;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 input[type="text"]:focus,
 input[type="file"]:focus {
-  outline: 2px solid var(--secondary);
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(201,186,18,0.10);
 }
 
 button[type="submit"] {
@@ -197,58 +218,98 @@ button[type="submit"] {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  padding: 0.75em 1.3em;
+  border-radius: 6px;
+  font-size: 1.07em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
 }
 
 button[type="submit"]:hover,
 button[type="submit"]:focus {
   background: var(--secondary);
   color: var(--text-main);
+  box-shadow: 0 4px 16px rgba(60,60,60,0.13);
+  outline: none;
 }
 
 .resultados-busqueda,
 .pdf-lista,
 .resenas-lista {
-  margin-top: 1em;
+  margin-top: 1.3em;
   display: flex;
   flex-direction: column;
-  gap: 0.9em;
+  gap: 1.1em;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .resultado,
 .pdf-item {
-  background: #ececec;
-  border-radius: 4px;
-  padding: 0.7em 1em;
-  font-size: 1em;
+  background: linear-gradient(90deg, #ececec 80%, #f7f6f1 100%);
+  border-radius: 8px;
+  padding: 1em 1.3em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.06);
+  font-size: 1.04em;
+  transition: box-shadow 0.2s, transform 0.18s;
+  border: 1.5px solid #e2e2e2;
+  position: relative;
 }
 
 .pdf-item a {
   color: var(--primary);
   text-decoration: underline;
   font-weight: 500;
+  transition: color 0.2s;
+}
+
+.pdf-item a:hover,
+.pdf-item a:focus {
+  color: var(--secondary);
+  outline: none;
 }
 
 .resena-card {
   background: var(--bg-card);
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: var(--shadow);
-  padding: 1em 1.2em;
+  padding: 1.2em 1.5em;
   margin-bottom: 0.5em;
+  border-left: 5px solid var(--secondary);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.resena-card:hover,
+.resena-card:focus-within {
+  box-shadow: 0 8px 24px rgba(60,60,60,0.14);
+  border-left-color: var(--primary);
 }
 
 .resena-card h3 {
-  margin: 0 0 0.2em 0;
+  margin: 0 0 0.25em 0;
   color: var(--secondary);
+  font-size: 1.14em;
 }
 
 .resena-card .autor {
-  font-size: 0.93em;
+  font-size: 0.98em;
   color: #666;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
+}
+
+.resena-card .usuario {
+  font-size: 0.98em;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.3em;
 }
 
 .resena-card .puntuacion {
@@ -306,21 +367,61 @@ footer {
 
 @media (max-width: 700px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-    padding: 1.2em 1em;
+    flex-direction: row;
+    height: auto;
+    padding: 10%;
   }
   .nav-links {
-    flex-direction: column;
-    gap: 1em;
+    gap: 90%;
+    flex-wrap: wrap;
+    justify-content:right;
+    align-items:start;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  .logo-img {
+    width: 90px;
+    margin-bottom: 5%;
+  }
+
+@media (max-width: 600px) {
+  .buscador form,
+  .pdfs form {
+    padding: 1.1em 0.6em;
+    max-width: 90%;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  .buscador input[type="text"],
+  .pdfs input[type="text"],
+  .pdfs input[type="file"] {
     width: 100%;
-    margin-top: 1em;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 0.7em;
   }
-  main {
-    padding: 1em 0.3em;
+  button[type="submit"] {
+    width: 100%;
   }
-  .hero {
-    padding: 2em 0.5em 1.5em 0.5em;
+}
+
+@media (max-width: 700px) {
+  .resultados-busqueda,
+  .pdf-lista,
+  .resenas-lista {
+    max-width: 98vw;
+    gap: 0.7em;
   }
+  .resultado,
+  .pdf-item,
+  .resena-card {
+    padding: 0.8em 0.6em;
+    font-size: 0.7em;
+    border-radius: 6px;
+  }
+  .resena-card {
+    border-left-width: 3px;
+    padding: 1em 0.7em;
+  }
+}
 }
