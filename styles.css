@@ -318,6 +318,15 @@ button[type="submit"]:focus {
   margin-bottom: 0.4em;
 }
 
+.separador {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2em auto;
+  border-bottom: 2px solid var(--primary);
+  opacity: 0.7;
+  border-radius: 1px;
+}
+
 .contacto {
   max-width: 600px;
   margin: 2.5em auto 0 auto;
