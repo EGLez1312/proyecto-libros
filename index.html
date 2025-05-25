@@ -20,6 +20,7 @@
         <li><a href="#buscador">Buscar librerías</a></li>
         <li><a href="#pdfs">Subir PDF</a></li>
         <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
         <li><a href="#acceso">Acceso</a></li>
       </ul>
     </nav>
@@ -153,6 +154,25 @@
         </article>
         <!-- Más reseñas... -->
       </div>
+    </section>
+
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <form class="form-contacto" autocomplete="off">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
     </section>
   </main>
 
