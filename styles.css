@@ -441,7 +441,6 @@ footer {
   text-align: center;
   padding: 1.5em 0 1em 0;
   margin-top: 2em;
-  margin-botton: 2em; 
   font-size: 1em; 
   letter-spacing: 0.5px;
   border-radius: 10px 10px 0 0;
@@ -531,5 +530,11 @@ footer {
   .form-contacto button[type="submit"] {
     width: 100%;
   }
+}
+
+@media (max-width: 600px) {
+  .btn-arriba {
+    bottom: 5rem; /*sube el botón y así no tapa el footer */ 
+  } 
 }
 }
